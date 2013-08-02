@@ -4,11 +4,7 @@ NKColorSwitch
 Flat style UISwitch control for iOS. <br />
 Supports customizable control tint color, sizes, and shapes. <br />
 
-<<<<<<< HEAD
-<img src="https://raw.github.com/naokosaka/NKColorSwitch/Screen.png" width="50%"/>
-=======
 <img src="https://raw.github.com/naokosaka/NKColorSwitch/master/Screen.png"/>
->>>>>>> 2db61bd4bfe2f5d51176d30f3777a5c63ca5c793
 
 Requires iOS 5+ and ARC.
 
