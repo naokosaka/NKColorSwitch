@@ -9,8 +9,10 @@
 #import <QuartzCore/QuartzCore.h>
 
 static const CGFloat kAnimateDuration = 0.3f;
-static const CGFloat kHorizontalAdjustment = 2;
-static const CGFloat kRectShapeCornerRadius = 4;
+static const CGFloat kHorizontalAdjustment = 2.0f;
+static const CGFloat kRectShapeCornerRadius = 4.0f;
+static const CGFloat kThumbShadowOpacity = 0.3f;
+static const CGFloat kThumbShadowRadius = 0.5f;
 
 @interface NKColorSwitch();
 @property (nonatomic, strong) UIView *onBackgroundView;
@@ -85,6 +87,7 @@ static const CGFloat kRectShapeCornerRadius = 4;
     [self.thumbView.layer setCornerRadius:(self.frame.size.height-kHorizontalAdjustment)/2];
     [self.thumbView.layer setShadowOffset:CGSizeMake(0, 1)];
     [self.thumbView.layer setShouldRasterize:YES];
+    [self.thumbView.layer setShadowOpacity:kThumbShadowOpacity];
     [self.thumbView.layer setRasterizationScale:[UIScreen mainScreen].scale];
     [self addSubview:self.thumbView];
     self.shadow = YES;
@@ -194,8 +197,8 @@ static const CGFloat kRectShapeCornerRadius = 4;
     if (showShadow)
     {
         [self.thumbView.layer setShadowOffset:CGSizeMake(0, 1)];
-        [self.thumbView.layer setShadowRadius:0.5];
-        [self.thumbView.layer setShadowOpacity:0.5];
+        [self.thumbView.layer setShadowRadius:kThumbShadowRadius];
+        [self.thumbView.layer setShadowOpacity:kThumbShadowOpacity];
     }
     else
     {
