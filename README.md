@@ -37,6 +37,12 @@ Usage
 
 	// Set Thumb color
 	[nkColorSwitch setThumbTintColor:[UIColor whiteColor]];
+	
+	// Set ON background border color
+	[nkColorSwitch setOnTintBorderColor:[UIColor lightGrayColor]];
+	
+	// Set OFF background border color
+	[nkColorSwitch setTintBorderColor:[UIColor lightGrayColor]];
 
 3) Change shape
 	
