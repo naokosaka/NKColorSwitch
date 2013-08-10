@@ -25,6 +25,7 @@
 
     // Add NKSwitch
     [self.nkColorSwitch addTarget:self action:@selector(switchPressed:) forControlEvents:UIControlEventValueChanged];
+    [self.nkColorSwitch setTintBorderColor:[UIColor lightGrayColor]];
     
     NKColorSwitch *nkColorSwitch1 = [[NKColorSwitch alloc] initWithFrame:CGRectMake(20, 92, 100, 50)];
     [nkColorSwitch1 addTarget:self action:@selector(switchPressed:) forControlEvents:UIControlEventValueChanged];
@@ -93,6 +94,7 @@
         
         NKColorSwitch *nkColorSwitch = [[NKColorSwitch alloc] initWithFrame:CGRectMake(210, 6, 56, 30)];
         [nkColorSwitch addTarget:self action:@selector(tableSwitchPressed:) forControlEvents:UIControlEventValueChanged];
+        [nkColorSwitch setTintBorderColor:[UIColor lightGrayColor]];
         [cell.contentView addSubview:nkColorSwitch];
         
         UILabel *customLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 100, 44)];

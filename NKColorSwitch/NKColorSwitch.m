@@ -30,6 +30,8 @@ static const CGFloat kThumbShadowRadius = 0.5f;
 @synthesize tintColor = _tintColor;
 @synthesize thumbTintColor = _thumbTintColor;
 @synthesize shadow = _shadow;
+@synthesize onTintBorderColor = _onTintBorderColor;
+@synthesize tintBorderColor = _tintBorderColor;
 
 #pragma mark - View
 - (id)initWithFrame:(CGRect)frame
@@ -148,12 +150,38 @@ static const CGFloat kThumbShadowRadius = 0.5f;
     [self.onBackgroundView setBackgroundColor:color];
 }
 
+- (void)setOnTintBorderColor:(UIColor *)color
+{
+    if (_onTintBorderColor != color)
+        _onTintBorderColor = color;
+    
+    [self.onBackgroundView.layer setBorderColor:color.CGColor];
+    
+    if (color)
+        [self.onBackgroundView.layer setBorderWidth:0.75];
+    else
+        [self.onBackgroundView.layer setBorderWidth:0.0];
+}
+
 - (void)setTintColor:(UIColor *)color
 {
     if (_tintColor != color)
         _tintColor = color;
     
     [self.offBackgroundView setBackgroundColor:color];
+}
+
+- (void)setTintBorderColor:(UIColor *)color
+{
+    if (_tintBorderColor != color)
+        _tintBorderColor = color;
+    
+    [self.offBackgroundView.layer setBorderColor:color.CGColor];
+    
+    if (color)
+        [self.offBackgroundView.layer setBorderWidth:0.75];
+    else
+        [self.offBackgroundView.layer setBorderWidth:0.0];
 }
 
 - (void)setThumbTintColor:(UIColor *)color

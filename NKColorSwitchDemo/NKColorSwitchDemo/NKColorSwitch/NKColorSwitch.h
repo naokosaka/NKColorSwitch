@@ -32,4 +32,11 @@ typedef enum {
 
 /* Thumb drop shadow on/off */
 @property (nonatomic, assign) BOOL shadow;
+
+/* The border color used to tint the appearance when the switch is disabled. */
+@property (nonatomic, strong) UIColor *tintBorderColor;
+
+/* The border color used to tint the appearance of the switch when it is turned on. */
+@property (nonatomic, strong) UIColor *onTintBorderColor;
+
 @end
