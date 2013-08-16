@@ -9,7 +9,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 static const CGFloat kAnimateDuration = 0.3f;
-static const CGFloat kHorizontalAdjustment = 2.0f;
+static const CGFloat kHorizontalAdjustment = 3.0f;
 static const CGFloat kRectShapeCornerRadius = 4.0f;
 static const CGFloat kThumbShadowOpacity = 0.3f;
 static const CGFloat kThumbShadowRadius = 0.5f;
@@ -158,7 +158,7 @@ static const CGFloat kThumbShadowRadius = 0.5f;
     [self.onBackgroundView.layer setBorderColor:color.CGColor];
     
     if (color)
-        [self.onBackgroundView.layer setBorderWidth:0.75];
+        [self.onBackgroundView.layer setBorderWidth:1.50];
     else
         [self.onBackgroundView.layer setBorderWidth:0.0];
 }
@@ -179,7 +179,7 @@ static const CGFloat kThumbShadowRadius = 0.5f;
     [self.offBackgroundView.layer setBorderColor:color.CGColor];
     
     if (color)
-        [self.offBackgroundView.layer setBorderWidth:0.75];
+        [self.offBackgroundView.layer setBorderWidth:1.50];
     else
         [self.offBackgroundView.layer setBorderWidth:0.0];
 }
