@@ -13,6 +13,7 @@ static const CGFloat kHorizontalAdjustment = 3.0f;
 static const CGFloat kRectShapeCornerRadius = 4.0f;
 static const CGFloat kThumbShadowOpacity = 0.3f;
 static const CGFloat kThumbShadowRadius = 0.5f;
+static const CGFloat kSwitchBorderWidth = 1.75f;
 
 @interface NKColorSwitch();
 @property (nonatomic, strong) UIView *onBackgroundView;
@@ -129,14 +130,14 @@ static const CGFloat kThumbShadowRadius = 0.5f;
     if (_on)
     {
         [self.onBackgroundView setAlpha:1.0];
-        [self.offBackgroundView setAlpha:0.0];
+        self.offBackgroundView.transform = CGAffineTransformMakeScale(0.0, 0.0);
         
         self.thumbView.center = CGPointMake(self.onBackgroundView.frame.size.width - (self.thumbView.frame.size.width+kHorizontalAdjustment)/2, self.thumbView.center.y);
     }
     else
     {
         [self.onBackgroundView setAlpha:0.0];
-        [self.offBackgroundView setAlpha:1.0];
+        self.offBackgroundView.transform = CGAffineTransformMakeScale(1.0, 1.0);
         
         self.thumbView.center = CGPointMake((self.thumbView.frame.size.width+kHorizontalAdjustment)/2, self.thumbView.center.y);
     }
@@ -158,7 +159,7 @@ static const CGFloat kThumbShadowRadius = 0.5f;
     [self.onBackgroundView.layer setBorderColor:color.CGColor];
     
     if (color)
-        [self.onBackgroundView.layer setBorderWidth:1.50];
+        [self.onBackgroundView.layer setBorderWidth:kSwitchBorderWidth];
     else
         [self.onBackgroundView.layer setBorderWidth:0.0];
 }
@@ -179,7 +180,7 @@ static const CGFloat kThumbShadowRadius = 0.5f;
     [self.offBackgroundView.layer setBorderColor:color.CGColor];
     
     if (color)
-        [self.offBackgroundView.layer setBorderWidth:1.50];
+        [self.offBackgroundView.layer setBorderWidth:kSwitchBorderWidth];
     else
         [self.offBackgroundView.layer setBorderWidth:0.0];
 }
@@ -247,21 +248,36 @@ static const CGFloat kThumbShadowRadius = 0.5f;
                          if (on)
                          {
                              [self.onBackgroundView setAlpha:1.0];
-                             [self.offBackgroundView setAlpha:0.0];
                          }
                          else
                          {
                              [self.onBackgroundView setAlpha:0.0];
-                             [self.offBackgroundView setAlpha:1.0];
                          }
                          
                      }
                      completion:^(BOOL finished) {
                          if (finished)
-                         {                             
+                         {
                              [self updateSwitch:on];
                          }
                          
+                     }];
+    
+    [UIView animateWithDuration:duration
+                          delay:0.075f
+                        options:UIViewAnimationOptionCurveEaseOut
+                     animations:^{
+                         if (on)
+                         {
+                             self.offBackgroundView.transform = CGAffineTransformMakeScale(0.0, 0.0);
+                         }
+                         else
+                         {
+                             self.offBackgroundView.transform = CGAffineTransformMakeScale(1.0, 1.0);
+                         }
+                         
+                     }
+                     completion:^(BOOL finished) {
                      }];
 }
 

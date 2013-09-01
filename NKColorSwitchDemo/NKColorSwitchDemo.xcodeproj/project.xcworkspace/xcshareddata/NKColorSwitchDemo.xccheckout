@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3126A01B-CC9D-4543-89BE-69D6C2155437</string>
+	<key>IDESourceControlProjectName</key>
+	<string>NKColorSwitchDemo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B5FA0DF3-FB1E-410C-BF70-78CE86902A7F</key>
+		<string>https://github.com/naokosaka/NKColorSwitch.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>NKColorSwitchDemo/NKColorSwitchDemo.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B5FA0DF3-FB1E-410C-BF70-78CE86902A7F</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/naokosaka/NKColorSwitch.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B5FA0DF3-FB1E-410C-BF70-78CE86902A7F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B5FA0DF3-FB1E-410C-BF70-78CE86902A7F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>NKColorSwitch</string>
+		</dict>
+	</array>
+</dict>
+</plist>
